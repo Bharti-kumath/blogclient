@@ -1,0 +1,126 @@
+
+.singlepost{
+    padding: 4rem;
+}
+.singlepostwrapper{
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+.singlepostimg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.singleposttitle{
+    
+    text-align: center;
+    font-family: 'lora' , serif;
+    margin: 10px;
+    font-size: 28px;
+}
+.singleposttitleinput{
+    
+    font-family: 'lora' , serif;
+    margin: 10px;
+    font-size: 28px;
+    border: none;
+    color: gray;
+    text-align: center;
+    background-color: #95cde2;
+}
+
+.singleposttitleinput:focus{
+    outline: none;
+    border: none;
+    background-color: #95cde2;
+}
+
+.singlepostedit{
+float: right;
+cursor: pointer;
+}
+.singleposticon{
+    font-size: 16px;
+    margin-left: 10px;
+    
+}
+
+.singleposticon:first-child{
+    color: teal;
+}
+.singleposticon:last-child{
+    color: tomato;
+}
+.singlepostinfo{
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: 'Varela Round' , sans-serif;
+   color: #daa22c;
+    display: flex;
+    justify-content: space-between;
+}
+
+.singlepostdesc{
+    color: #666;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #95cde2;
+}
+.singlepostdesc::first-letter{
+    margin-left: 40px;
+    font-weight: 600;
+    font-size: 30px;
+}
+.singlepostdescinput{
+    cursor: pointer;
+    border: none;
+    color: #666;
+    font-size: 18px;
+    line-height: 24px;
+    max-height: 150px !important;
+    background-color: #95cde2;
+}
+.singlepostdescinput:focus{
+    outline: none;
+    background-color: #95cde2;
+}
+.singlepostauthor b{
+    text-transform: capitalize;
+}
+.singlepostbutton{
+    background-color: teal;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+
+@media (max-width:30rem){
+    .singlepost{
+        padding: 1rem;
+    }
+    .singlepostinfo{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    .singlepostdesc{
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+    }
+    .singleposttitle{
+        text-align: left;
+    }
+}

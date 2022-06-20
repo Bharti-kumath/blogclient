@@ -1,0 +1,43 @@
+.comment{
+    margin: 2rem;
+}
+.comment h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.commentbox{
+    min-width: 26rem;
+    min-height: 10rem;
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.3rem;
+    border: none;
+}
+.commentbox:focus{
+    border: none;
+    outline: none;
+}
+.comment input{
+    padding: 0.3rem;
+    margin-right: 1rem;
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+    color: black;
+    border: none;
+}
+.comment input:focus{
+    outline: none;
+}
+.submit{
+    border: none;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: aliceblue;
+    background-color: rgb(14, 94, 175);
+}
+@media (max-width:30rem){
+    .comment{
+        margin: 1rem;
+    }
+}

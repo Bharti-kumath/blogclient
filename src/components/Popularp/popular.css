@@ -1,0 +1,63 @@
+.App {
+  width: 80%;
+  margin: 3rem auto;
+  position: relative;
+  overflow: visible;
+
+
+}
+
+.slide {
+  transform:  translateY(10%)  scale(0.4);
+  transition: all 400ms ease-in-out ;
+}
+
+.activeSlide {
+  transform: scale(1)  translateY(0%);
+  opacity: 1;
+}
+
+
+.arrow {
+  padding: 1rem 1.5rem;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  background-color: aliceblue;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.arrow svg {
+  transition: color 300ms;
+}
+
+.arrow svg:hover {
+  color: #0c5963;
+}
+
+.next {
+  right: 0%;
+  top: 50%;
+}
+
+.prev {
+  left: 0%;
+  top: 50%;
+}
+
+@media (max-width:50rem){
+  html{
+    font-size: 60%;
+  }
+  .App{
+    width: 100%;
+    margin: 3rem 0.5rem;
+  }
+  .arrow{
+    padding: 1rem;
+  }
+  .next{
+    right: 2%;
+  }
+}

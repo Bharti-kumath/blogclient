@@ -1,0 +1,134 @@
+
+.settingwrapper{
+    
+    padding: 4rem;
+    padding-top: 10px;
+    position: relative;
+    background-color:  #95cde2;;
+    
+}
+.settingtitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.updatetitle{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color:aliceblue ;
+    font-weight: 700;
+}
+
+.deletetitle{
+    font-size: 12px;
+    color: rgb(238, 236, 236);
+    border-radius: 10px;
+    font-weight: 600;
+    width: auto;
+    background-color: rgb(199, 14, 51);
+    width: 10rem;
+    align-self: center;
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border: none;
+    margin-right: 1rem;
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+}
+.settingform{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.settingpp{
+    display: flex;
+    align-items: flex-end;
+    margin: 10px 0;
+}
+
+.settingpp img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.settingicon{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #097298;
+    color: whitesmoke;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.settingform label{
+    font-size: 20px;
+margin-top: 15px;
+
+}
+.settingform input{
+    font-size: 1rem;
+    color: gray;
+    margin: 5px 0;
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color: #95cde2;
+
+}
+.settingform input:focus{
+    outline: none;
+}
+
+.formimg{
+ position: absolute;
+top: 15%;
+width: 45%;
+right: -40px;
+z-index: 1;
+}
+.settingsubmit{
+    width: 10rem;
+    align-self: center;
+    border: none;
+    color: white;
+    background: #097298;
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.successmsg{
+    margin-top: 20px;
+    color: rgb(71, 27, 182);
+    text-align: center;
+}
+@media (max-width:50rem){
+
+    .formimg{
+        top: 50%;
+        width: 70%;
+        right: 0;
+        transform: translateX(4rem);
+    }
+    html{
+        overflow: hidden;
+    }
+}
