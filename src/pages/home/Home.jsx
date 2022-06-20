@@ -21,13 +21,12 @@ export default function Home() {
       const pp = await axiosInstance.get("/posts");
       setPosts(res.data);
       setPposts(pp.data);
-    
-    }
-    fetchposts().catch(error => {
-      console.log(error.response)});
-  ;
-    console.log("post is fetched")
-  }, [search])
+    };
+    fetchposts().catch((error) => {
+      console.log(error.response);
+    });
+    console.log("post is fetched");
+  }, [search]);
 
   return (
     <div style={{ backgroundColor: "#95cde2" }}>

@@ -12,7 +12,7 @@ export default function Settings() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://beyond-theblog.herokuapp.com/images/";
 
   const handlesubmit = async (e) => {
     e.preventDefault();
