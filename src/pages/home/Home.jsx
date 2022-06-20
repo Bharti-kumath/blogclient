@@ -7,7 +7,7 @@ import Post from "../../components/Posts/Posts";
 import Carousel from "../../components/Popularp/Popular";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
+
 import { axiosInstance } from "../../config";
 
 export default function Home() {

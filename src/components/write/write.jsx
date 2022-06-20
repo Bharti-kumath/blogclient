@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import "./write.css";
 import { Context } from "../context/Context";
-import axios from "axios";
+
 import { axiosInstance } from "../../config";
 import Audioplayer from "../Player"
 

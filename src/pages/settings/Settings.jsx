@@ -2,7 +2,7 @@ import "./settings.css";
 import image from "../../Images/fly.gif";
 import { useContext, useState } from "react";
 import { Context } from "../../components/context/Context";
-import axios from "axios";
+
 import { axiosInstance } from "../../config";
 
 export default function Settings() {
@@ -34,7 +34,7 @@ export default function Settings() {
       } catch (err) {}
     }
     try {
-      const res =await axios.put("/user/" + user._id, updateUser);
+      const res =await axiosInstance.put("/user/" + user._id, updateUser);
       setSuccess(true);
       dispatch({type : "UPDATE_SUCCESS" , payload:res.data})
     } catch (err) {
@@ -43,7 +43,7 @@ export default function Settings() {
   };
   const handledelete = async () => {
     try {
-      await axios.delete(`/user/${user._id}`, {
+      await axiosInstance.delete(`/user/${user._id}`, {
         data: { username: user.username,userId : user._id },
       });
       dispatch({ type: "LOGOUT" });
