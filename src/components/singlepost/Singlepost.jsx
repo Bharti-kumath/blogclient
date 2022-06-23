@@ -5,13 +5,13 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../context/Context";
 import Comment from "../Comment/comment";
-import { axiosInstance } from "../../config";
-
+// import { axiosInstance } from "../../config";
+import axios from "axios";
 export default function SinglePost() {
   const Location = useLocation();
   const path = Location.pathname.split("/")[2];
   const [posts, setPost] = useState({});
-  const PF = "https://beyond-theblog.herokuapp.com/images/";
+  const PF = "http://localhost:5000/images/"
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -19,7 +19,7 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axiosInstance.get("/posts/" + path);
+      const res = await axios.get("/posts/" + path);
       console.log(res.data);
       setPost(res.data);
       setTitle(res.data.title);
@@ -30,7 +30,7 @@ export default function SinglePost() {
 
   const handledelete = async () => {
     try {
-      await axiosInstance.delete(`/posts/${posts._id}`, {
+      await axios.delete(`/posts/${posts._id}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -40,7 +40,7 @@ export default function SinglePost() {
   
   const handleupdate = async () => {
     try {
-      await axiosInstance.put(`/posts/${posts._id}`, {
+      await axios.put(`/posts/${posts._id}`, {
         username: user.username,
         title,
         desc,

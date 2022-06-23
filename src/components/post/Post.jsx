@@ -1,7 +1,7 @@
 import "./post.css";
 import { Link } from "react-router-dom";
 export default function Post({ post }) {
-  const PF = "https://beyond-theblog.herokuapp.com/images/";
+  const PF = "http://localhost:5000/images/"
 
 
   return (

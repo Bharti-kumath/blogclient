@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-
+import axios from "axios";
+// import { axiosInstance } from "../../config";
 import "./home.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/Footer/footer";
@@ -8,7 +9,6 @@ import Carousel from "../../components/Popularp/Popular";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useLocation } from "react-router-dom";
 
-import { axiosInstance } from "../../config";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -17,8 +17,8 @@ export default function Home() {
 
   useEffect(() => {
     const fetchposts = async () => {
-      const res = await axiosInstance.get("/posts" + search);
-      const pp = await axiosInstance.get("/posts");
+      const res = await axios.get("/posts" + search);
+      const pp = await axios.get("/posts");
       setPosts(res.data);
       setPposts(pp.data);
     };
