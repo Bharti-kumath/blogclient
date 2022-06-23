@@ -54,7 +54,8 @@
         position: fixed;
         display: block;
         width: 100%;
-        height: 100%;
+        height: 120%;
+       
         top: 0;
         left: 0;
         text-align: center;
@@ -65,7 +66,8 @@
 
       #loading-image {
         position: absolute;
-        top: 10%;
+        top: 0%;
+        width: 100%;
         left: 10%;
         z-index: 100;
       }
@@ -77,17 +79,17 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <div id="root">
-      <!-- <div id="loading">
+      <div id="loading">
         <img id="loading-image" src="./bloggif.gif" alt="Loading..." />
-      </div> -->
+      </div>
     </div>
   </body>
-  <!-- <script>
+  <script>
     function stop(){
       $('#loading').hide();
     }
     $(window).load(function() {
       setTimeout(stop,15000)
     });
-  </script> -->
+  </script>
 </html>
