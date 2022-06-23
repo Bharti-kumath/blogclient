@@ -2,8 +2,8 @@ import "./settings.css";
 import image from "../../Images/fly.gif";
 import { useContext, useState } from "react";
 import { Context } from "../../components/context/Context";
-import axios from "axios";
-// import { axiosInstance } from "../../config";
+// import axios from "axios";
+import { axiosInstance } from "../../config";
 
 export default function Settings() {
   const { user ,dispatch} = useContext(Context);
@@ -12,7 +12,7 @@ export default function Settings() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
-  const PF = "http://localhost:5000/images/"
+  const PF = "https://beyondthe-blog.herokuapp.com/images/"
 
   const handlesubmit = async (e) => {
     e.preventDefault();
@@ -30,11 +30,11 @@ export default function Settings() {
       data.append("file", file);
       updateUser.profilePic = filename;
       try {
-        await axios.post("/upload", data);
+        await axiosInstance.post("/upload", data);
       } catch (err) {}
     }
     try {
-      const res =await axios.put("/user/" + user._id, updateUser);
+      const res =await axiosInstance.put("/user/" + user._id, updateUser);
       setSuccess(true);
       dispatch({type : "UPDATE_SUCCESS" , payload:res.data})
     } catch (err) {
@@ -43,7 +43,7 @@ export default function Settings() {
   };
   const handledelete = async () => {
     try {
-      await axios.delete(`/user/${user._id}`, {
+      await axiosInstance.delete(`/user/${user._id}`, {
         data: { username: user.username,userId : user._id },
       });
       dispatch({ type: "LOGOUT" });
